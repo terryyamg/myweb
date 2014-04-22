@@ -26,7 +26,7 @@
         	<nav id="scroll_down">
             	<ul class="span3 nav nav-pills nav-stacked navbar-fixed-left">
                 	<li class="active" id="first"><a href="#no1" class="scroll"><h3>左至右</h3></a></li>
-                    <li><a href="#no2" class="scroll"><h3>按鈕在裡面</h3></a></li>
+                    <li><a href="#no2" class="scroll"><h3>右至左</h3></a></li>
                 </ul>
             </nav>
              <!-- Apply scroll down to hash tag and automatically change the active class-->
@@ -69,18 +69,18 @@
 						</script>
                       <input type="button" class="btn btn-info" id="no1-1" value="點我"/>
                       <br>
-                      <div id="div1-1"style="background:#A3A2D0;height:100px;width:100px;position: relative;"></div>
+                      <div id="div1-1" style="background:#A3A2D0;height:100px;width:100px;position: relative;"></div>
                       
                     <h2>按鈕在裡面</h2>
                     <hr>               
                    	<script> 
 						$(function(){
 							$("#no1-2").click(function(){
-								$("div").animate({left:'1000px'});
+								$("#div1-2").animate({left:'1000px'});
 							});
 						});
 						</script>
-                       <div style="background:#A3A2D0;height:100px;width:100px;position: relative;">
+                       <div id="div1-2" style="background:#A3A2D0;height:100px;width:100px;position: relative;">
                       	<input type="button" class="btn btn-info" id="no1-2" value="點我"/>
                        </div>
                       <br>
