@@ -10,7 +10,7 @@ background: #AFD6FF;
 
 .span10{
 border: 0.5em solid #AB8EC6;
-position: absolute;
+position: relative;
 right: 0;
 margin-top: 5em;
 border-radius: 1em;
