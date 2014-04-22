@@ -8,22 +8,22 @@ position: fixed;
 background: #AFD6FF;
 }
 
-.span12{
+.span8{
 border: 0.5em solid #AB8EC6;
 margin-top: 5em;
 border-radius: 1em;
 padding: 1em;
 }
-.span12 h2{
+.span8 h2{
 text-align: center;
 }
-.span12 h3{
+.span8 h3{
 text-align:center;
 }
-.span12 h4{
+.span8 h4{
 text-align:center;
 }
-.span12 p{
+.span8 p{
 text-indent: 2em;
 text-align: justify;
 }
