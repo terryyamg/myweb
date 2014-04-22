@@ -5,10 +5,12 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
 <title>Hello! I love coding</title>
 </head>
 
-<body>
+<body class="well fluid">
 <div class="navbar">
     	<div class="navbar-inner">
    		<a class="brand" href="#">Welcome</a>
@@ -20,39 +22,81 @@
     </div>
 <hr>
 <center>
-    
-	<div class="container-fluid">
-   		<div class="row-fluid">
-			<div class="span2">
-    		<h2>here</h2>
-            <h2>here</h2>
-            
-    		</div>
-			<div class="span10">
-			<h2>herrererer</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
-            <h2>here</h2>
+    <article id="main" class="fluid">
+    	<section id="learning">
+        	<nav id="scroll_down">
+            	<ul class="span3 nav nav-pills nav-stacked navbar-fixed-left">
+                	<li class="active" id="first"><a href="#no1" class="scroll"><h3>第一節</h3></a></li>
+                    <li><a href="#no2" class="scroll"><h3>第二節</h3></a></li>
+                </ul>
+            </nav>
+             <!-- Apply scroll down to hash tag and automatically change the active class-->
+				<script>
+					var main = main = $('#scroll_down ul');
+
+					$('.scroll').click(function(event) {
+					        
+					    event.preventDefault();
+					 
+					    var full_url = this.href,
+					        parts = full_url.split('#'),
+					        trgt = parts[1],
+					        target_offset = $('#'+trgt).offset(),
+					        target_top = target_offset.top;
+					        
+					    $('html, body').animate({scrollTop:target_top}, 500);
+					    
+					    /* Remove active class on any li when an anchor is clicked */
+					    
+					    main.children().removeClass();
+					    
+					    /* Add active class to clicked anchor's parent li */
+					        
+					    $(this).parent().addClass('active');
+
+					});
+				</script>
+             <div class="row" id="no1">
+             	<div class="span3"></div>
+                <div class="span12" style="margin-left:8em">
+                	<h2>The first</h2>
+                    <hr>
+                    <p><a href="page2.html">動畫一</a></p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                    <p>跳跳跳</p>
+                </div>
+             </div>
+             
+             <div class="row" id="no2">
+             	<div class="span3"></div>
+                <div class="span12" style="margin-left:8em">
+                	<h2>The second</h2>
+                </div>
 			</div>
-		</div>
-	</div>
+		</section>
+	</article>
+	
 </center>
 </body>
 </html>

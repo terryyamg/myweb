@@ -1,0 +1,36 @@
+body{
+overflow-x:hidden;
+}
+#scroll_down{
+position: fixed;
+}
+#scroll_down a:hover {
+background: #AFD6FF;
+}
+
+.span12{
+border: 0.5em solid #AB8EC6;
+margin-top: 5em;
+border-radius: 1em;
+padding: 1em;
+}
+.span12 h2{
+text-align: center;
+}
+.span12 h3{
+text-align:center;
+}
+.span12 h4{
+text-align:center;
+}
+.span12 p{
+text-indent: 2em;
+text-align: justify;
+}
+nav > ul {
+border-radius:1em;
+margin-top:5em;
+margin-left:3em;
+padding:1em;
+border:0.5em solid #AB8EC6;
+}
