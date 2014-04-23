@@ -16,7 +16,7 @@
    		<a class="brand" href="#">Welcome</a>
    		<ul class="nav">
    			<li><a href="index.html">Home</a></li>
-   			<li class="active"><a href="page2.html">no2</a></li>
+   			<li class="active"><a href="page2.html">JQuery</a></li>
     	</ul>
     	</div>
     </div>
@@ -68,7 +68,7 @@
 							});
 						});
 					</script>
-                      <input type="button" class="btn btn-info" id="no1-1" value="點我"/>
+                      <input type="button" class="btn btn-info" id="no1-1" value="GO"/>
                       <br>
                       <div id="div1-1" style="background:#A3A2D0;height:100px;width:100px;position: relative;"></div>
                     <!--class 1-2 -->  
@@ -82,7 +82,7 @@
 					});
 					</script>
                     <div id="div1-2" style="background:#A3A2D0;height:100px;width:100px;position: relative;">
-                    <input type="button" class="btn btn-info" id="no1-2" value="點我"/>
+                    <input type="button" class="btn btn-info" id="no1-2" value="GO"/>
                     </div>
                     <br>
                     <!--class 1-3 -->  
@@ -95,7 +95,7 @@
 						});
 					});
 					</script>
-                    <input type="button" class="btn btn-info" id="no1-3" value="點我"/>
+                    <input type="button" class="btn btn-info" id="no1-3" value="GO"/>
                     <br>
                     <div id="div1-3" style="background:#A3A2D0;height:100px;width:100px;position: relative; float:right;"></div>
                     <!--class 1-4 -->
@@ -110,14 +110,35 @@
 							if(i%2==1){
 								$("#div1-4").animate({left:'500px'});
 							}else{
-								$("#div1-4").animate({left:'-500px'});
+								$("#div1-4").animate({left:'0px'});
 							}
 						});
 					});
 					</script>
-                    <input type="button" class="btn btn-info" id="no1-4" value="點我"/>
+                    <input type="button" class="btn btn-info" id="no1-4" value="GO"/>
                     <br>
                     <div id="div1-4" style="background:#A3A2D0;height:100px;width:100px;position: relative;"></div>
+                    <!--class 1-5 -->  
+                	<h2>先後淡出</h2>
+                    <hr>               
+                   	<script> 
+						$(function(){
+							$("#no1-5").click(function(){
+								$("#div1-51").animate({left:'500px',opacity:'0.5'},1000);
+								$("#div1-52").animate({left:'500px',opacity:'0.4'},2000);
+								$("#div1-53").animate({left:'500px',opacity:'0.3'},3000);
+								$("#div1-54").animate({left:'500px',opacity:'0.2'},4000);
+								$("#div1-55").animate({left:'500px',opacity:'0.1'},5000);
+							});
+						});
+					</script>
+                      <input type="button" class="btn btn-info" id="no1-5" value="GO"/>
+                      <br>
+                      <div id="div1-51" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
+                      <div id="div1-52" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
+                      <div id="div1-53" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
+                      <div id="div1-54" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
+                      <div id="div1-55" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
                 </div>
                 </div>
              </div>
