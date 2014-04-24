@@ -25,8 +25,8 @@
     	<section id="learning">
         	<nav id="scroll_down">
             	<ul class="span3 nav nav-pills nav-stacked navbar-fixed-left">
-                	<li class="active" id="first"><a href="#no1" class="scroll"><h3>左至右</h3></a></li>
-                    <li><a href="#no2" class="scroll"><h3>右至左</h3></a></li>
+                	<li class="active" id="first"><a href="#no1" class="scroll"><h3>Lesson 1</h3></a></li>
+                    <li><a href="#no2" class="scroll"><h3>Lesson 2</h3></a></li>
                 </ul>
             </nav>
              <!-- Apply scroll down to hash tag and automatically change the active class-->
@@ -70,7 +70,7 @@
 					</script>
                       <input type="button" class="btn btn-info" id="no1-1" value="GO"/>
                       <br>
-                      <div id="div1-1" style="background:#A3A2D0;height:100px;width:100px;position: relative;"></div>
+                      <div id="div1-1" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
                     <!--class 1-2 -->  
                     <h2>按鈕在裡面</h2>
                     <hr>               
@@ -81,7 +81,7 @@
 						});
 					});
 					</script>
-                    <div id="div1-2" style="background:#A3A2D0;height:100px;width:100px;position: relative;">
+                    <div id="div1-2" style="background:#A3A2D0;height:50px;width:50px;position: relative;">
                     <input type="button" class="btn btn-info" id="no1-2" value="GO"/>
                     </div>
                     <br>
@@ -97,9 +97,9 @@
 					</script>
                     <input type="button" class="btn btn-info" id="no1-3" value="GO"/>
                     <br>
-                    <div id="div1-3" style="background:#A3A2D0;height:100px;width:100px;position: relative; float:right;"></div>
+                    <div id="div1-3" style="background:#A3A2D0;height:50px;width:50px;position: relative; float:right;"></div>
                     <!--class 1-4 -->
-                    <br><br><br><br><br><br>
+                    <br><br><br>
                 	<h2>左右切換</h2>
                     <hr>               
                    	<script> 
@@ -117,7 +117,7 @@
 					</script>
                     <input type="button" class="btn btn-info" id="no1-4" value="GO"/>
                     <br>
-                    <div id="div1-4" style="background:#A3A2D0;height:100px;width:100px;position: relative;"></div>
+                    <div id="div1-4" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
                     <!--class 1-5 -->  
                 	<h2>先後淡出</h2>
                     <hr>               
@@ -134,11 +134,41 @@
 					</script>
                       <input type="button" class="btn btn-info" id="no1-5" value="GO"/>
                       <br>
-                      <div id="div1-51" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
-                      <div id="div1-52" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
-                      <div id="div1-53" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
-                      <div id="div1-54" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
-                      <div id="div1-55" style="background:#A3A2D0;height:20px;width:20px;position: relative;"></div>
+                      <div id="div1-51" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      <div id="div1-52" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      <div id="div1-53" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      <div id="div1-54" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      <div id="div1-55" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                    <!--class 1-6 -->  
+                	<h2>滑鼠進入迴旋</h2>
+                    <hr>               
+                   	<script> 
+						$(function(){
+							$("#div1-61").mouseenter(function(){
+								$("#div1-61").animate({left:'500px',opacity:'0.5'},1000).animate({left:'0px',opacity:'1'},1000);
+							});
+							$("#div1-62").mouseenter(function(){
+								$("#div1-62").animate({left:'500px',opacity:'0.4'},1000).animate({left:'0px',opacity:'1'},1000);
+							});
+							$("#div1-63").mouseenter(function(){
+								$("#div1-63").animate({left:'500px',opacity:'0.3'},1000).animate({left:'0px',opacity:'1'},1000);
+							});
+							$("#div1-64").mouseenter(function(){
+								$("#div1-64").animate({left:'500px',opacity:'0.2'},1000).animate({left:'0px',opacity:'1'},1000);
+							});
+							$("#div1-65").mouseenter(function(){
+								$("#div1-65").animate({left:'500px',opacity:'0.1'},1000).animate({left:'0px',opacity:'1'},1000);
+							});
+						});
+					</script>
+                      <br>
+                      <div id="div1-61" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      <div id="div1-62" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      <div id="div1-63" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      <div id="div1-64" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      <div id="div1-65" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      
+                      
                 </div>
                 </div>
              </div>
