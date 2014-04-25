@@ -167,7 +167,24 @@
                       <div id="div1-63" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
                       <div id="div1-64" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
                       <div id="div1-65" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
-                      
+                    <!--class 1-7 -->  
+                	<h2>逃離滑鼠</h2>
+                    <hr>               
+                   	<script> 
+						$(function(){
+							$("#div1-7").mousemove(function(e){
+								if(e.pageX<1500){
+									$("#div1-7").stop().animate({left:('0'+e.pageX-775+100)+'px'}).text("X: " + e.pageX); ;
+								}else{
+									$("#div1-7").stop().animate({left:('0'+e.pageX-1500)+'px'}).text("X: " + e.pageX); ;
+									}
+									
+							});
+						});
+					</script>
+                      <br>
+                      <div id="div1-7" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
+                   
                       
                 </div>
                 </div>
