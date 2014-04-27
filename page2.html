@@ -189,25 +189,22 @@
                     <hr>               
                    	<script> 
 						$(function(){
-							$("input").keydown(function(event){ 
-    								$("#qwe").html("Key: " + event.which);
+							$("#input1-8").keydown(function(event){
     								switch(event.which){
 									case 38: //上
-										$("#div1-8").stop().animate({top:('10px'});
+										$("#div1-8").stop().animate({top:'+=50px'});
 									case 40: //下
-										$("#div1-8").stop().animate({top:('-10px'});
+										$("#div1-8").stop().animate({top:'-=50px'});
 									case 37: //左
-										$("#div1-8").stop().animate({left:('-10px'});
+										$("#div1-8").stop().animate({left:'-=50px'});
 									case 39: //右
-										$("#div1-8").stop().animate({left:('10px'});
+										$("#div1-8").stop().animate({left:'+=50px'});
 								}
   							});
 						});
 					</script>
                       <br>
-                      在此輸入上下左右:<input type="text" />
-                      <div id="qwe"><div />
-                      <br><br><br><br><br>
+                      在此輸入上下左右:<input id="input1-8" type="text" />
                       <div id="div1-8" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
                       
                 </div>
