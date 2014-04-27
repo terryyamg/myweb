@@ -190,6 +190,7 @@
                    	<script> 
 						$(function(){
 							$("#input1-8").keydown(function(event){
+								$("#div1-8").html(event.which);
 								switch(event.which){
 									case 38: //上
 										$("#div1-8").html(event.which);
