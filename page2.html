@@ -191,12 +191,23 @@
 						$(function(){
 							$("input").keydown(function(event){ 
     								$("#qwe").html("Key: " + event.which);
+    								switch(event.which){
+									case 38: //上
+										$("#div1-8").stop().animate({top:('10px'});
+									case 40: //下
+										$("#div1-8").stop().animate({top:('-10px'});
+									case 37: //左
+										$("#div1-8").stop().animate({left:('-10px'});
+									case 39: //右
+										$("#div1-8").stop().animate({left:('10px'});
+								}
   							});
 						});
 					</script>
                       <br>
                       在此輸入上下左右:<input type="text" />
                       <div id="qwe"><div />
+                      <br>
                       <div id="div1-8" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
                       
                 </div>
