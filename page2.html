@@ -184,7 +184,28 @@
 					</script>
                       <br>
                       <div id="div1-7" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
-                   
+                   <!--class 1-8 -->  
+                	<h2>追蹤滑鼠</h2>
+                    <hr>               
+                   	<script> 
+						$(function(){
+							$("#input1-8").keydown(function(event){
+								switch(event.which){
+									case 38: //上
+										$("#div1-8").stop().animate({top:('10px'});
+									case 40: //下
+										$("#div1-8").stop().animate({top:('-10px'});
+									case 37: //左
+										$("#div1-8").stop().animate({left:('-10px'});
+									case 39: //右
+										$("#div1-8").stop().animate({left:('10px'});
+								}
+							});
+						});
+					</script>
+                      <br>
+                      <input id="input1-8" type="text" />
+                      <div id="div1-8" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
                       
                 </div>
                 </div>
