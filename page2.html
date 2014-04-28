@@ -208,8 +208,35 @@
 						});
 					</script>
                       <br>
-                      在此輸入上下左右:<input id="input1-8" type="text" />
+                      <h4>Key the<i class="icon-arrow-up"></i><i class="icon-arrow-down"></i><i class="icon-arrow-left"></i><i class="icon-arrow-right"></i>:<input id="input1-8" type="text" /> <a href="http://glyphicons.com/">glyphicons.com</a></h4>
                       <div id="div1-8" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                      
+                      <!--class 1-9 -->  
+                	<h2>鍵盤上下左右伸縮</h2>
+                    <hr>               
+                   	<script> 
+						$(function(){
+							$("#input1-9").keydown(function(event){
+    								switch(event.which){
+									case 38: //上
+										$("#div1-9").stop().animate({height:'-=50px'});
+										break;
+									case 40: //下
+										$("#div1-9").stop().animate({height:'+=50px'});
+										break;
+									case 37: //左
+										$("#div1-9").stop().animate({width:'-=50px'});
+										break;
+									case 39: //右
+										$("#div1-9").stop().animate({width:'+=50px'});
+										break;
+								}
+  							});
+						});
+					</script>
+                      <br>
+                      <h4>Key the<i class="icon-arrow-up"></i><i class="icon-arrow-down"></i><i class="icon-arrow-left"></i><i class="icon-arrow-right"></i>:<input id="input1-9" type="text" /> <a href="http://glyphicons.com/">glyphicons.com</a></h4>
+                      <div id="div1-9" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
                       
                 </div>
                 </div>
