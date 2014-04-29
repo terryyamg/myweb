@@ -211,7 +211,7 @@
                       <h4>Key the<i class="icon-arrow-up"></i><i class="icon-arrow-down"></i><i class="icon-arrow-left"></i><i class="icon-arrow-right"></i>:<input id="input1-8" type="text" /> <a href="http://glyphicons.com/">glyphicons.com</a></h4>
                       <div id="div1-8" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
                       
-                      <!--class 1-9 -->  
+                    <!--class 1-9 -->  
                 	<h2>鍵盤上下左右伸縮</h2>
                     <hr>               
                    	<script> 
@@ -235,8 +235,34 @@
 						});
 					</script>
                       <br>
-                      <h4>Key the<i class="icon-arrow-up"></i><i class="icon-arrow-down"></i><i class="icon-arrow-left"></i><i class="icon-arrow-right"></i>:<input id="input1-9" type="text" /> <a href="http://glyphicons.com/">glyphicons.com</a></h4>
+                      <h4>Key the<i class="icon-arrow-up"></i><i class="icon-arrow-down"></i><i class="icon-arrow-left"></i><i class="icon-arrow-right"></i>:<input id="input1-9" type="text" /></h4>
                       <div id="div1-9" style="background:#A3A2D0;height:10px;width:10px;position: relative;"></div>
+                    <!--class 1-10 -->
+                    <br><br><br>
+                	<h2>增加變色</h2>
+                    <hr>               
+                   	<script> 
+					var i=0;
+					//建立方塊色彩陣列
+					var colors = ["#F4BAF3", "#EB87B8", "#F4BBBA", "#EEEFA1", "#99E353", "#39DF8E", "#6DE6E7", "#3B39DF", "#A31D1B", "#7E54A6"];
+					$(function(){
+						$("#no1-10").click(function(){
+							i++;
+							//建立隨機數字
+							var rand=Math.floor(Math.random()*10);
+							if(i==1){
+							$("#div1-10").append(" <div id='add"+i+"' style='background:"+colors[rand]+";height:50px;width:50px;position: relative;'></div>");
+							$("#add"+i+"").animate({left:'+=50px'});
+							}else{
+							$("#add"+(i-1)+"").append(" <div id='add"+i+"' style='background:"+colors[rand]+";height:50px;width:50px;position: relative;'></div>");
+							$("#add"+i+"").animate({left:'+=50px'});
+							}
+						});
+					});
+					</script>
+                    <input type="button" class="btn btn-info" id="no1-10" value="ADD"/>
+                    <br>
+                    <div id="div1-10" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
                       
                 </div>
                 </div>
