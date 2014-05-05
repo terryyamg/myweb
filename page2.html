@@ -26,8 +26,8 @@ jquery.easing.1.3
     	<section id="learning">
         	<nav id="scroll_down">
             	<ul class="span3 nav nav-pills nav-stacked navbar-fixed-left">
-                	<li class="active" id="first"><a href="#no1" class="scroll"><h3>Lesson 1</h3></a></li>
-                    <li><a href="#no2" class="scroll"><h3>Lesson 2</h3></a></li>
+                	<li class="active" id="first"><a href="#no1" class="scroll"><h3>Animate</h3></a></li>
+                    <li><a href="#no2" class="scroll"><h3>Simple</h3></a></li>
                 </ul>
             </nav>
              <!-- Apply scroll down to hash tag and automatically change the active class-->
@@ -324,25 +324,22 @@ jquery.easing.1.3
 						$(function(){
 							$("#no1-12").click(function(){
 								$("#div1-1201").animate({left:'700px',opacity:'1'},1000);
-								$("#div1-1202").animate({left:'-50px',opacity:'0.7'});
-								$("#div1-1203").animate({left:'-50px',opacity:'0.5'});
-								$("#div1-1204").animate({left:'-50px',opacity:'0.3'});
-								$("#div1-1205").animate({left:'-50px',opacity:'0.1'});
+								$("#div1-1202").animate({left:'700px',opacity:'0.9'},1500);
+								$("#div1-1203").animate({left:'700px',opacity:'0.8'},2000);
+								$("#div1-1204").animate({left:'700px',opacity:'0.7'},2500);
+								$("#div1-1205").animate({left:'700px',opacity:'0.6'},3000);
 							});
 						});
 					</script>
                       <input type="button" class="btn btn-info" id="no1-12" value="GO"/>
                       <br>
-                      <div id="div1-1201" style="background:#A3A2D0;height:50px;width:50px;position: relative;">
-                      	<div id="div1-1202" style="background:#A3A2D0;height:50px;width:50px;position: relative;">
-                        	<div id="div1-1203" style="background:#A3A2D0;height:50px;width:50px;position: relative;">
-                            	<div id="div1-1204" style="background:#A3A2D0;height:50px;width:50px;position: relative;">
-                                	<div id="div1-1205" style="background:#A3A2D0;height:50px;width:50px;position: relative;">
-                        			</div>
-                        		</div>
-                        	</div>
-                        </div>
-                      </div>                   
+                      <div style="height:50px;width:50px;position: relative;">                      
+                      <div id="div1-1201" style="background:#A3A2D0;height:50px;width:50px;position: absolute;"></div>
+                      <div id="div1-1202" style="background:#A3A2D0;height:50px;width:50px;position: absolute;"></div>
+                      <div id="div1-1203" style="background:#A3A2D0;height:50px;width:50px;position: absolute;"></div>
+                      <div id="div1-1204" style="background:#A3A2D0;height:50px;width:50px;position: absolute;"></div>
+                      <div id="div1-1205" style="background:#A3A2D0;height:50px;width:50px;position: absolute;"></div>
+                      </div>
                 </div>
                 </div>
              </div>
