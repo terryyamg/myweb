@@ -361,8 +361,44 @@ jquery.easing.1.3
                       <input type="button" class="btn btn-info" id="no1-13" value="GO"/>
                       <br>
                       <div id="div1-13" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>  
-                      
-
+                    <!--class 1-14 -->  
+                	<h2>1-14 弦波移動</h2>
+                    <hr>               
+                   	<script>
+						$(function(){
+							$("#no1-1401").click(function(){
+								//跑兩周4pi，每pi/20畫一次
+								for(var i=0;i<=(4*Math.PI);i=i+(Math.PI/20)){
+										$("#div1-1401").animate({left:'+=10px',top:100*(Math.sin(i))},50);
+								}
+							});
+							$("#no1-1402").click(function(){
+								//跑兩周4pi，每pi/20畫一次
+								for(var i=0;i<=(4*Math.PI);i=i+(Math.PI/20)){
+										$("#div1-1402").animate({left:'+=10px',top:100*(Math.cos(i))},50);
+								}
+							});
+							$("#no1-1403").click(function(){
+								//跑兩周4pi，每pi/20畫一次
+								for(var i=0;i<=(4*Math.PI);i=i+(Math.PI/20)){
+										$("#div1-1403").animate({left:'+=10px',top:100*(Math.tan(i))},50);
+								}
+							});
+						});
+					</script>
+                      <h4>sin</h4>
+                      <input type="button" class="btn btn-info" id="no1-1401" value="GO"/>
+                      <br>
+                      <div id="div1-1401" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
+                      <h4>cos</h4>
+                      <input type="button" class="btn btn-info" id="no1-1402" value="GO"/>
+                      <br>
+                      <div id="div1-1402" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
+                      <h4>tan</h4>
+                      <input type="button" class="btn btn-info" id="no1-1403" value="GO"/>
+                      <br>
+                      <div id="div1-1403" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>       
+					
                 </div>
              </div>
              
