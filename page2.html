@@ -404,27 +404,34 @@ jquery.easing.1.3
                    	<script>
 						$(function(){
 							$("#no1-1501").click(function(){
-								//跑兩周4pi，每pi/20畫一次
 								for(var i=0;i<=(2*Math.PI);i=i+(Math.PI/20)){
 										$("#div1-1501").animate({left:200*(Math.cos(i)),top:200*(Math.sin(i))},50);
 								}
 							});
 							$("#no1-1502").click(function(){
-								//跑兩周4pi，每pi/20畫一次
 								for(var i=0;i<=(2*Math.PI);i=i+(Math.PI/20)){
 										$("#div1-1502").animate({left:200*(Math.cos(i)),top:100*(Math.sin(i))},50);
 								}
 							});
+							$("#no1-1503").click(function(){
+								for(var i=0;i<=(20*Math.PI);i=i+(Math.PI/20)){
+										$("#div1-1503").animate({left:100*(Math.cos(i))+10*i,top:100*(Math.sin(i))},10);
+								}
+							});
 						});
 					</script>
-                    	<h4>circle</h4>
+                    	<h4>Circle</h4>
                    		<input type="button" class="btn btn-info" id="no1-1501" value="GO"/>
                     	<br>
                     	<div id="div1-1501" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
-                    	<h4>ellipse</h4>
+                    	<h4>Ellipse</h4>
                     	<input type="button" class="btn btn-info" id="no1-1502" value="GO"/>
                     	<br>
                     	<div id="div1-1502" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
+                        <h4>Spiral</h4>
+                    	<input type="button" class="btn btn-info" id="no1-1503" value="GO"/>
+                    	<br>
+                    	<div id="div1-1503" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
                  
                 </div>
              </div>
