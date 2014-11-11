@@ -92,9 +92,10 @@
                       <script> 
 						$(function(){
 							$("#push").click(function(){
-								Parse.Push.send({where: new Parse.Query(Parse.Installation)
+								Parse.Push.send({
+									where: new Parse.Query(Parse.Installation),
   									data: {
-    										alert: "The Giants won against the Mets 2-3."
+    										alert: "a0987654321"
   									}
 								}, {
   									success: function() {
