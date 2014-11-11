@@ -7,6 +7,23 @@
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <!-- Parse.js -->
 <script src="//www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+<script>
+	$(function() {
+ 
+    Parse.$ = jQuery;
+ 
+  // Replace this line with the one on your Quickstart Guide Page
+    Parse.initialize("zeZhEqE2VpLolXPwfQh9NIAtbniIdHYUNdS0Qoqd", "DYQItwGcdw6OxQXWyg9ZlVQI1kJEGf41AocilOYq");
+ 
+    var TestObject = Parse.Object.extend("TestObject");
+    var testObject = new TestObject();
+    testObject.save({foo: "bar"}).then(function(object) {
+      alert("yay! it worked");
+    });
+ 
+});
+	
+</script>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="css/index.css" rel="stylesheet" type="text/css" />
 <title>This Page2</title>
@@ -75,19 +92,18 @@
                       <script> 
 						$(function(){
 							$("#push").click(function(){
-								Parse.Push.send({
-  channels: [ "Giants", "Mets" ],
-  data: {
-    alert: "The Giants won against the Mets 2-3."
-  }
-}, {
-  success: function() {
-    // Push was successful
-  },
-  error: function(error) {
-    // Handle error
-  }
-});
+								Parse.Push.send({channels: [ "Giants", "Mets" ],
+  									data: {
+    										alert: "The Giants won against the Mets 2-3."
+  									}
+								}, {
+  									success: function() {
+    									// Push was successful
+								},
+									 error: function(error) {
+									 // Handle error
+  								}
+								});
 							});
 						});
 					</script>
