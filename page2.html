@@ -70,6 +70,26 @@
 					</script>
                       <input type="button" class="btn btn-info" id="no1-1" value="GO"/>
                       <br>
+                      <script> 
+						$(function(){
+							$("#push").click(function(){
+								Parse.Push.send({
+  channels: [ "Giants", "Mets" ],
+  data: {
+    alert: "The Giants won against the Mets 2-3."
+  }
+}, {
+  success: function() {
+    // Push was successful
+  },
+  error: function(error) {
+    // Handle error
+  }
+});
+							});
+						});
+					</script>
+                      <input type="button" class="btn btn-info" id="push" value="push"/>
                       <div id="div1-1" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
                     <!--class 1-2 -->  
                     <h2>1-2 按鈕在裡面</h2>
