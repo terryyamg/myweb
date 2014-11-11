@@ -18,7 +18,7 @@
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
     testObject.save({foo: "bar"}).then(function(object) {
-      alert("yay! it worked");
+      alert("Parse is work");
     });
  
 });
@@ -92,7 +92,7 @@
                       <script> 
 						$(function(){
 							$("#push").click(function(){
-								Parse.Push.send({channels: [ "Giants", "Mets" ],
+								Parse.Push.send({
   									data: {
     										alert: "The Giants won against the Mets 2-3."
   									}
