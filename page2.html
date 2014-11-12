@@ -110,12 +110,14 @@
 								var query = new Parse.Query(point);
 								query.equalTo("location", "A");
 								query.find({
-								  success: function(results) {
-								    results.set("Abnormal", 1);
- 								 },
- 								 error: function(error) {
- 								   alert("Error: " + error.code + " " + error.message);
- 								 }
+									success: function(results) {
+										alert("Success!");
+										results.set("Abnormal", 1);
+										results.save();
+									},
+									error: function(error) {
+										alert("Error: " + error.code + " " + error.message);
+									}
 								});
 							});
 							
@@ -139,12 +141,14 @@
 								var query = new Parse.Query(point);
 								query.equalTo("location", "B");
 								query.find({
-								  success: function(results) {
-								    results.set("Abnormal", 1);
- 								 },
- 								 error: function(error) {
- 								   alert("Error: " + error.code + " " + error.message);
- 								 }
+									success: function(results) {
+										alert("Success!");
+										results.set("Abnormal", 1);
+										results.save();
+									},
+									error: function(error) {
+										alert("Error: " + error.code + " " + error.message);
+									}
 								});
 							});
 						});
