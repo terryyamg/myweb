@@ -91,11 +91,44 @@
                       <br>
                       <script> 
 						$(function(){
-							$("#push").click(function(){
+							$("#pushA").click(function(){
 								Parse.Push.send({
 									where: new Parse.Query(Parse.Installation),
   									data: {
-    										alert: "a0987654321"
+    										alert: "AAAAA"
+  									}
+								}, {
+  									success: function() {
+    									// Push was successful
+								},
+									 error: function(error) {
+									 // Handle error
+  								}
+								});
+								
+								var Point = Parse.Object.extend("Point");
+								var query = new Parse.Query(Point);
+								query.equalTo("location", "A");
+								query.find({
+								  success: function(results) {
+								    alert("Successfully retrieved " + results.length + " scores.");
+								    // Do something with the returned Parse.Object values
+								    for (var i = 0; i < results.length; i++) {
+								      var object = results[i];
+ 								     alert(object.id + ' - ' + object.get('location'));
+ 								   }
+ 								 },
+ 								 error: function(error) {
+ 								   alert("Error: " + error.code + " " + error.message);
+ 								 }
+								});
+							});
+							
+							$("#pushB").click(function(){
+								Parse.Push.send({
+									where: new Parse.Query(Parse.Installation),
+  									data: {
+    										alert: "BBBBB"
   									}
 								}, {
   									success: function() {
@@ -108,7 +141,8 @@
 							});
 						});
 					</script>
-                      <input type="button" class="btn btn-info" id="push" value="push"/>
+                      <input type="button" class="btn btn-info" id="pushA" value="A點異常"/>
+                      <input type="button" class="btn btn-info" id="pushB" value="B點異常"/>
                       <div id="div1-1" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
                     <!--class 1-2 -->  
                     <h2>1-2 按鈕在裡面</h2>
