@@ -95,7 +95,7 @@
 								Parse.Push.send({
 									where: new Parse.Query(Parse.Installation),
   									data: {
-    										alert: "AAAAA"
+    										alert: "A點異常"
   									}
 								}, {
   									success: function() {
@@ -105,18 +105,13 @@
 									 // Handle error
   								}
 								});
-								
-								var Point = Parse.Object.extend("Point");
-								var query = new Parse.Query(Point);
+								//輸入異常
+								var point = Parse.Object.extend("Point");
+								var query = new Parse.Query(point);
 								query.equalTo("location", "A");
 								query.find({
 								  success: function(results) {
-								    alert("Successfully retrieved " + results.length + " scores.");
-								    // Do something with the returned Parse.Object values
-								    for (var i = 0; i < results.length; i++) {
-								      var object = results[i];
- 								     alert(object.id + ' - ' + object.get('location'));
- 								   }
+								    results.set("Abnormal", 1);
  								 },
  								 error: function(error) {
  								   alert("Error: " + error.code + " " + error.message);
@@ -128,7 +123,7 @@
 								Parse.Push.send({
 									where: new Parse.Query(Parse.Installation),
   									data: {
-    										alert: "BBBBB"
+    										alert: "B點異常"
   									}
 								}, {
   									success: function() {
@@ -137,6 +132,19 @@
 									 error: function(error) {
 									 // Handle error
   								}
+								});
+								
+								//輸入異常
+								var point = Parse.Object.extend("Point");
+								var query = new Parse.Query(point);
+								query.equalTo("location", "B");
+								query.find({
+								  success: function(results) {
+								    results.set("Abnormal", 1);
+ 								 },
+ 								 error: function(error) {
+ 								   alert("Error: " + error.code + " " + error.message);
+ 								 }
 								});
 							});
 						});
