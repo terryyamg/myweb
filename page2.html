@@ -125,9 +125,8 @@
   								}
 								});
 								set(B);
-						});
-						
-						function set(pointAbnormal){
+								
+							set(pointAbnormal){
 							//輸入異常
 								var point = Parse.Object.extend("Point");
 								var query = new Parse.Query(point);
@@ -159,6 +158,8 @@
 									}
 								});
 						}
+						});
+						
 					</script>
                       <input type="button" class="btn btn-info" id="pushA" value="A點異常"/>
                       <input type="button" class="btn btn-info" id="pushB" value="B點異常"/>
