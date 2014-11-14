@@ -98,6 +98,26 @@
 						alert: "A點異常"
 						}
 					}, {
+						success: function() {
+						// Push was successful
+						},
+						error: function(error) {
+						// Handle error
+						}
+					});
+				
+				$.fn.myFunction(A);
+				});
+				
+				
+				
+				$("#pushB").click(function(){
+					Parse.Push.send({
+						where: new Parse.Query(Parse.Installation),
+						data: {
+						alert: "B點異常"
+						}
+					}, {
 					success: function() {
 					// Push was successful
 					},
@@ -105,15 +125,21 @@
 					// Handle error
 					}
 					});
-				//輸入異常
-				var point = Parse.Object.extend("Point");
-				var query = new Parse.Query(point);
-				query.equalTo("location", "A");
-				query.find({
-				success: function(results) {
-					alert("Success!");
-					// Do something with the returned Parse.Object values
-					for (var i = 0; i < results.length; i++) {
+				$.fn.myFunction(B);
+				});
+				
+				$.fn.myFunction = function(arg) { 
+					//輸入異常
+					//Point table
+					var point = Parse.Object.extend("Point");
+					var query = new Parse.Query(point);
+					//搜尋location=A
+					query.equalTo("location", arg);
+					query.find({
+						success: function(results) {
+						alert("Success!");
+						// Do something with the returned Parse.Object values
+						for (var i = 0; i < results.length; i++) {
 						var object = results[i];
 						alert(object.id + ' - ' + object.get('location'));
 						object.set("Abnormal", 1);
@@ -135,58 +161,7 @@
 				}
 				});
 				
-				$.fn.myFunction();
-				});
-				
-				$.fn.myFunction = function() { 
-					alert('hi'); 
 				}
-				
-				$("#pushB").click(function(){
-					Parse.Push.send({
-						where: new Parse.Query(Parse.Installation),
-						data: {
-						alert: "B點異常"
-						}
-					}, {
-					success: function() {
-					// Push was successful
-					},
-					error: function(error) {
-					// Handle error
-					}
-					});
-				//輸入異常
-				var point = Parse.Object.extend("Point");
-				var query = new Parse.Query(point);
-				query.equalTo("location", "B");
-				query.find({
-				success: function(results) {
-					alert("Success!");
-					// Do something with the returned Parse.Object values
-					for (var i = 0; i < results.length; i++) {
-					var object = results[i];
-					alert(object.id + ' - ' + object.get('location'));
-					object.set("Abnormal", 1);
-					object.save(null, {
-					success: function(gameScore) {
-					// Execute any logic that should take place after the object is saved.
-					alert('New object created with objectId: ' + gameScore.id);
-					},
-					error: function(gameScore, error) {
-					// Execute any logic that should take place if the save fails.
-					// error is a Parse.Error with an error code and message.
-					alert('Failed to create new object, with error code: ' + error.message);
-					}
-					});
-					}
-				},
-				error: function(error) {
-					alert("Error: " + error.code + " " + error.message);
-				}
-				});
-				});
-				
 				
 			});
 			</script>
