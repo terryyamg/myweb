@@ -134,7 +134,13 @@
 					alert("Error: " + error.code + " " + error.message);
 				}
 				});
+				
+				$.fn.myFunction();
 				});
+				
+				$.fn.myFunction = function() { 
+					alert('hi'); 
+				}
 				
 				$("#pushB").click(function(){
 					Parse.Push.send({
