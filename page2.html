@@ -106,7 +106,6 @@
 					}
 					});
 				//輸入異常
-				set();
 				var point = Parse.Object.extend("Point");
 				var query = new Parse.Query(point);
 				query.equalTo("location", "A");
@@ -182,9 +181,6 @@
 				});
 				});
 				
-				set(){
-					alert("set is running");
-				}
 				
 			});
 			</script>
