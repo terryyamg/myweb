@@ -106,7 +106,7 @@
 						}
 					});
 				
-				$.fn.myFunction(A);
+				$.fn.myFunction();
 				});
 				
 				
@@ -125,16 +125,16 @@
 					// Handle error
 					}
 					});
-				$.fn.myFunction(B);
+				$.fn.myFunction();
 				});
 				
-				$.fn.myFunction = function(arg) { 
+				$.fn.myFunction = function() { 
 					//輸入異常
 					//Point table
 					var point = Parse.Object.extend("Point");
 					var query = new Parse.Query(point);
 					//搜尋location=A
-					query.equalTo("location", arg);
+					query.equalTo("location", "A");
 					query.find({
 						success: function(results) {
 						alert("Success!");
