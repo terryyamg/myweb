@@ -120,7 +120,7 @@
 					var Point = Parse.Object.extend("Point");
 					var point = new Point;
 					
-					point.set("userObject", channels);
+					point.addUnique("userObject", channels);
 					point.set("title", constructionSite);
 					point.set("occurDate", date);
 					point.set("contents", company);
