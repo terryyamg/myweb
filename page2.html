@@ -95,7 +95,7 @@
 					Parse.Push.send({
 						where: new Parse.Query(Parse.Installation),
 						data: {
-						alert: "A點異常"
+						alert: "異常的推播訊息"
 						}
 					}, {
 						success: function() {
@@ -106,85 +106,44 @@
 						}
 					});
 				
-				$.fn.myFunction("A123456789");
+				$.fn.myFunction();
 				});
 				
-				$("#pushB").click(function(){
-					Parse.Push.send({
-						where: new Parse.Query(Parse.Installation),
-						data: {
-						alert: "B點異常"
-						}
-					}, {
-					success: function() {
-					// Push was successful
-					},
-					error: function(error) {
-					// Handle error
-					}
-					});
-				$.fn.myFunction("B987654321");
-				});
-				
-				$("#pushC").click(function(){
-					Parse.Push.send({
-						where: new Parse.Query(Parse.Installation),
-						data: {
-						alert: "C點異常"
-						}
-					}, {
-					success: function() {
-					// Push was successful
-					},
-					error: function(error) {
-					// Handle error
-					}
-					});
-				$.fn.myFunction("C333333333");
-				});
-				
-				$.fn.myFunction = function(arg) { 
+				$.fn.myFunction = function() { 
+					var channels="manage1";	//頻道-帳號
+					var constructionSite="都心苑住宅大樓新建工程";	//工地
+					var date = new Date(); //日期
+					var company ="鴻材科技股份有限公司";	//公司
+					var remark ="施工人員未穿著施工背心及標示";	//事項
 					//輸入異常
 					//Point table
-					var point = Parse.Object.extend("Point");
-					var query = new Parse.Query(point);
-					var date = new Date();
-					//搜尋location=A
-					query.equalTo("location", arg);
-					query.find({
-						success: function(results) {
-						alert("Success!");
-						// Do something with the returned Parse.Object values
-						for (var i = 0; i < results.length; i++) {
-						var object = results[i];
-						alert(object.id + ' - ' + object.get('location'));
-						object.set("Abnormal", 1);
-						object.set("occurDate", date);
-						object.save(null, {
-							success: function(gameScore) {
-							// Execute any logic that should take place after the object is saved.
-							alert('New object created with objectId: ' + gameScore.id);
-							},
-							error: function(gameScore, error) {
-							// Execute any logic that should take place if the save fails.
-							// error is a Parse.Error with an error code and message.
+					var Point = Parse.Object.extend("Point");
+					var point = new Point;
+					
+					point.set("userObject", channels);
+					point.set("title", constructionSite);
+					point.set("occurDate", date);
+					point.set("contents", company);
+					point.set("remark", remark);
+					
+					point.save(null, {
+						success: function(point) {
+						// Execute any logic that should take place after the object is saved.
+							alert('New object created with objectId: ' + point.id);
+						},
+						error: function(point, error) {
+						// Execute any logic that should take place if the save fails.
+						// error is a Parse.Error with an error code and message.
 							alert('Failed to create new object, with error code: ' + error.message);
-							}
-						});
-					}
-				},
-				error: function(error) {
-					alert("Error: " + error.code + " " + error.message);
-				}
-				});
-				
+						}
+					});
+					
 				}
 				
 			});
 			</script>
-                      <input type="button" class="btn btn-info" id="pushA" value="A點異常"/>
-                      <input type="button" class="btn btn-info" id="pushB" value="B點異常"/>
-                      <input type="button" class="btn btn-info" id="pushC" value="C點異常"/>
+                      <input type="button" class="btn btn-info" id="pushA" value="發出異常"/>
+
                       <div id="div1-1" style="background:#A3A2D0;height:50px;width:50px;position: relative;"></div>
                     <!--class 1-2 -->  
                     <h2>1-2 按鈕在裡面</h2>
