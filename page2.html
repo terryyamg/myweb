@@ -93,7 +93,7 @@
 			$(function(){
 				$("#pushA").click(function(){
 					var ch="manage1";	//頻道-帳號 
-					var message = "異常的推播訊息"; //推播訊息
+					var message = "異常的推播訊息1"; //推播訊息
 					Parse.Push.send({
 					//	where: new Parse.Query(Parse.Installation), //所有頻道接收推播
 						channels: [ch],
@@ -103,9 +103,11 @@
 					}, {
 						success: function() {
 						// Push was successful
+							alert('send success!');
 						},
 						error: function(error) {
 						// Handle error
+							alert('send error...');
 						}
 					});
 				
