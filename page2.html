@@ -91,8 +91,9 @@
                       <br>
                       <script>
 			$(function(){
+				var ch="manage1";	//頻道-帳號 
 				$("#pushA").click(function(){
-					var ch="manage1";	//頻道-帳號 
+					
 					var message = "異常的推播訊息1"; //推播訊息
 					Parse.Push.send({
 					//	where: new Parse.Query(Parse.Installation), //所有頻道接收推播
