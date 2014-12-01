@@ -96,7 +96,7 @@
 					var message = "異常的推播訊息"; //推播訊息
 					Parse.Push.send({
 					//	where: new Parse.Query(Parse.Installation), //所有頻道接收推播
-						channels: ch,
+						channels: [ch],
 						data: {
 						alert: message
 						}
