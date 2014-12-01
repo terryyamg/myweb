@@ -96,7 +96,7 @@
 					var message = "異常的推播訊息"; //推播訊息
 					Parse.Push.send({
 					//	where: new Parse.Query(Parse.Installation), //所有頻道接收推播
-						channels: [ ch ],
+						channels: ch,
 						data: {
 						alert: message
 						}
@@ -123,7 +123,7 @@
 					var Point = Parse.Object.extend("Point");
 					var point = new Point;
 					
-					point.addUnique("userObject", channels);
+					point.addUnique("userObject", ch);
 					point.set("title", constructionSite);
 					point.set("occurDate", date);
 					point.set("contents", company);
