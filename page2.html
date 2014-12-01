@@ -92,10 +92,12 @@
                       <script>
 			$(function(){
 				$("#pushA").click(function(){
+					var channels="manage1";	//頻道-帳號 var channels = Parse.Installation:所有人
+					var message = "異常的推播訊息"; //推播訊息
 					Parse.Push.send({
-						where: new Parse.Query(Parse.Installation),
+						where: new Parse.Query(channels),
 						data: {
-						alert: "異常的推播訊息"
+						alert: message
 						}
 					}, {
 						success: function() {
@@ -110,7 +112,7 @@
 				});
 				
 				$.fn.myFunction = function() { 
-					var channels="manage1";	//頻道-帳號
+					
 					var constructionSite="都心苑住宅大樓新建工程";	//工地
 					var date = new Date(); //日期
 					var company ="鴻材科技股份有限公司";	//公司
