@@ -95,7 +95,7 @@
 					var channels="manage1";	//頻道-帳號 var channels = Parse.Installation:所有人
 					var message = "異常的推播訊息"; //推播訊息
 					Parse.Push.send({
-						where: new Parse.Query(channels),
+						where: new Parse.Query([channels]),
 						data: {
 						alert: message
 						}
