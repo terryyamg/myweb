@@ -91,7 +91,7 @@
                       <br>
                       <script>
 			$(function(){
-				var ch="apepas";	//頻道-帳號 
+				var ch="admins";	//頻道-帳號 
 				$("#pushA").click(function(){
 					
 					var message = "異常的推播訊息1"; //推播訊息
@@ -132,10 +132,11 @@
 					point.set("item", item);
 					point.save(null, {
 						success: function(point) {
+							alert("success");
 						// Execute any logic that should take place after the object is saved.
 						},
 						error: function(point, error) {
-							alert(error);
+							alert(error.message);
 						// Execute any logic that should take place if the save fails.
 						// error is a Parse.Error with an error code and message.
 						}
