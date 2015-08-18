@@ -97,6 +97,7 @@
 				var company =["鴻材科技股份有限公司","鴻材科技股份有限公司2"];	//公司
 				var remark =["施工人員未穿著施工背心及標示","施工人員未穿著施工背心及標示2"];	//事項
 				for(var i=0;i<ch.length; i++)
+					alert(i);
 					$("#pushA").click(function(){
 						
 						var message = "異常的推播訊息"; //推播訊息
@@ -115,11 +116,11 @@
 							}
 						});
 					
-					$.fn.myFunction();
+					$.fn.myFunction(i);
 					});
-					
-					$.fn.myFunction = function() { 
-					
+				}
+					$.fn.myFunction = function(i) { 
+					alert("Func:".i);
 					//	var item = 2;
 						//輸入異常
 						//Point table
@@ -145,7 +146,7 @@
 						});
 						
 					}
-				}
+				
 				
 			});
 			</script>
