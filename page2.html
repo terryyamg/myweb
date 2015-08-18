@@ -116,22 +116,15 @@
 							}
 						});
 					
-					$.fn.myFunction(i);
-					});
-				}
-					$.fn.myFunction(p) = function() { 
-				//	alert("Func:"+i);
-					//	var item = 2;
-						//輸入異常
-						//Point table
+					
 						var Point = Parse.Object.extend("Point");
 						var point = new Point;
 						
-						point.addUnique("userObject", ch[p]);
-						point.set("title", constructionSite[p]);
-						point.set("occurDate", date[p]);
-						point.set("contents", company[p]);
-						point.set("remark", remark[p]);
+						point.addUnique("userObject", ch[i]);
+						point.set("title", constructionSite[i]);
+						point.set("occurDate", date[i]);
+						point.set("contents", company[i]);
+						point.set("remark", remark[i]);
 						point.set("item", 3);
 						point.save(null, {
 							success: function(point) {
@@ -144,8 +137,12 @@
 							// error is a Parse.Error with an error code and message.
 							}
 						});
+				
+					});
+				}
+				
 						
-					}
+					
 				
 				
 			});
