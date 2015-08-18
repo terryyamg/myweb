@@ -91,57 +91,60 @@
                       <br>
                       <script>
 			$(function(){
-				var ch="admins";	//頻道-帳號 
-				$("#pushA").click(function(){
+				var ch=["admins", "manage1"];	//頻道-帳號 
+				var constructionSite=["都心苑住宅大樓新建工程", "都心苑住宅大樓新建工程2"];	//工地
+				var date = new Date(); //日期
+				var company =["鴻材科技股份有限公司","鴻材科技股份有限公司2"];	//公司
+				var remark =["施工人員未穿著施工背心及標示","施工人員未穿著施工背心及標示2"];	//事項
+				for(var i=0;i<ch.length; i++)
+					$("#pushA").click(function(){
+						
+						var message = "異常的推播訊息"; //推播訊息
+						Parse.Push.send({
+						//	where: new Parse.Query(Parse.Installation), //所有頻道接收推播
+							channels: [ch[i]],
+							data: {
+							alert: message
+							}
+						}, {
+							success: function() {
+							// Push was successful
+							},
+							error: function(error) {
+							// Handle error
+							}
+						});
 					
-					var message = "異常的推播訊息1"; //推播訊息
-					Parse.Push.send({
-					//	where: new Parse.Query(Parse.Installation), //所有頻道接收推播
-						channels: [ch],
-						data: {
-						alert: message
-						}
-					}, {
-						success: function() {
-						// Push was successful
-						},
-						error: function(error) {
-						// Handle error
-						}
-					});
-				
-				$.fn.myFunction();
-				});
-				
-				$.fn.myFunction = function() { 
-					var constructionSite="都心苑住宅大樓新建工程";	//工地
-					var date = new Date(); //日期
-					var company ="鴻材科技股份有限公司";	//公司
-					var remark ="施工人員未穿著施工背心及標示";	//事項
-				//	var item = 2;
-					//輸入異常
-					//Point table
-					var Point = Parse.Object.extend("Point");
-					var point = new Point;
-					
-					point.addUnique("userObject", ch);
-					point.set("title", constructionSite);
-					point.set("occurDate", date);
-					point.set("contents", company);
-					point.set("remark", remark);
-					point.set("item", 3);
-					point.save(null, {
-						success: function(point) {
-							alert("success");
-						// Execute any logic that should take place after the object is saved.
-						},
-						error: function(point, error) {
-							alert(error.message);
-						// Execute any logic that should take place if the save fails.
-						// error is a Parse.Error with an error code and message.
-						}
+					$.fn.myFunction();
 					});
 					
+					$.fn.myFunction = function() { 
+					
+					//	var item = 2;
+						//輸入異常
+						//Point table
+						var Point = Parse.Object.extend("Point");
+						var point = new Point;
+						
+						point.addUnique("userObject", ch[i]);
+						point.set("title", constructionSite[i]);
+						point.set("occurDate", date[i]);
+						point.set("contents", company[i]);
+						point.set("remark", remark[i]);
+						point.set("item", 3);
+						point.save(null, {
+							success: function(point) {
+								alert("success");
+							// Execute any logic that should take place after the object is saved.
+							},
+							error: function(point, error) {
+								alert(error.message);
+							// Execute any logic that should take place if the save fails.
+							// error is a Parse.Error with an error code and message.
+							}
+						});
+						
+					}
 				}
 				
 			});
