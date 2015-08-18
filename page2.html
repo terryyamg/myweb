@@ -97,7 +97,7 @@
 				var company =["鴻材科技股份有限公司","鴻材科技股份有限公司2"];	//公司
 				var remark =["施工人員未穿著施工背心及標示","施工人員未穿著施工背心及標示2"];	//事項
 				for(var i=0;i<ch.length; i++)
-					alert(i);
+				//	alert(i);
 					$("#pushA").click(function(){
 						
 						var message = "異常的推播訊息"; //推播訊息
@@ -119,7 +119,7 @@
 					$.fn.myFunction(i);
 					});
 				}
-					$.fn.myFunction = function(i) { 
+					$.fn.myFunction = function(p) { 
 				//	alert("Func:"+i);
 					//	var item = 2;
 						//輸入異常
@@ -127,11 +127,11 @@
 						var Point = Parse.Object.extend("Point");
 						var point = new Point;
 						
-						point.addUnique("userObject", ch[i]);
-						point.set("title", constructionSite[i]);
-						point.set("occurDate", date[i]);
-						point.set("contents", company[i]);
-						point.set("remark", remark[i]);
+						point.addUnique("userObject", ch[p]);
+						point.set("title", constructionSite[p]);
+						point.set("occurDate", date[p]);
+						point.set("contents", company[p]);
+						point.set("remark", remark[p]);
 						point.set("item", 3);
 						point.save(null, {
 							success: function(point) {
